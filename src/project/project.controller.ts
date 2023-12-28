@@ -28,7 +28,7 @@ export class ProjectController {
   @UseGuards(AuthGuard('jwt'))
   @HttpCode(HttpStatus.CREATED)
   async trackProject(
-    @Body(new ValidationPipe({ transform: true, whitelist: true }))
+    @Body(new ValidationPipe())
     createProjectDto: CreateProjectDto,
     @GetUser() user: User, // Use the GetUser decorator to get the authenticated user
   ) {

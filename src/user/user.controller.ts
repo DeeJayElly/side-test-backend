@@ -21,7 +21,7 @@ export class UserController {
   @Post()
   @ApiOperation({ summary: 'Create user endpoint' })
   async createUser(
-    @Body(new ValidationPipe({ transform: true, whitelist: true }))
+    @Body(new ValidationPipe())
     createUserDto: CreateUserDto,
   ) {
     return this.userService.createUser(createUserDto);

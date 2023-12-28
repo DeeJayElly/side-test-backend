@@ -24,7 +24,7 @@ export class AuthController {
   @ApiOperation({ summary: 'Login endpoint' })
   @HttpCode(HttpStatus.OK) // Setting the HTTP status code to 200 for the login endpoint
   async login(
-    @Body(new ValidationPipe({ transform: true, whitelist: true }))
+    @Body(new ValidationPipe())
     loginDto: LoginDto,
   ) {
     try {
@@ -32,6 +32,7 @@ export class AuthController {
         loginDto.walletAddress,
         loginDto.signature,
       );
+
       if (user) {
         const token = await this.authService.login(user.walletAddress);
         return { ...token, userId: user.id };

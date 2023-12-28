@@ -28,7 +28,8 @@ export class AuthService {
       const recoveredAddress = ethers.verifyMessage(originalMessage, signature);
 
       // If the recovered address matches the provided wallet address, the signature is valid
-      if (recoveredAddress === walletAddress) {
+
+      if (recoveredAddress.toLowerCase() === walletAddress.toLowerCase()) {
         let user = await this.userRepository.findOne({
           where: { walletAddress },
         });
