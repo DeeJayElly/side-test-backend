@@ -19,6 +19,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       }),
       inject: [ConfigService],
     }),
+    ConfigModule,
     TypeOrmModule.forFeature([User]),
   ],
   controllers: [AuthController],
