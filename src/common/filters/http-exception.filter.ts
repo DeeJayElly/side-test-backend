@@ -20,7 +20,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     response.status(status).json({
       statusCode: status,
-      ...error,
+      error,
       timestamp: new Date().toISOString(),
     });
   }
