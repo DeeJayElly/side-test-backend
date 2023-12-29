@@ -20,7 +20,7 @@ export class ProjectService {
       const project = this.projectRepository.create({
         name: createProjectDto.name,
         description: createProjectDto.description,
-        floorPrice: createProjectDto.floorPrice,
+        price: createProjectDto.price,
         user: user,
       });
 

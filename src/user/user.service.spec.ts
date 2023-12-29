@@ -46,7 +46,7 @@ describe('UserService', () => {
     id: 1,
     name: 'Dreadfulz',
     description: 'Dreadfulz',
-    floorPrice: 241401.11,
+    price: 241401.11,
     user: testUser,
     createdAt: new Date(),
     updatedAt: new Date(),

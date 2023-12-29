@@ -22,7 +22,7 @@ describe('ProjectController', () => {
     id: 1,
     name: 'Sample Project',
     description: 'Sample Description',
-    floorPrice: 100,
+    price: 100,
     user: mockUser,
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -53,7 +53,7 @@ describe('ProjectController', () => {
       const createProjectDto: CreateProjectDto = {
         name: 'Sample Project',
         description: 'Sample Description',
-        floorPrice: 100,
+        price: 100,
       };
 
       jest

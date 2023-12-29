@@ -21,14 +21,14 @@ describe('ProjectService', () => {
   const mockCreateProjectDto: CreateProjectDto = {
     name: 'Sample Project',
     description: 'Sample Description',
-    floorPrice: 100,
+    price: 100,
   };
 
   const mockProject: any = {
     id: 1,
     name: 'Sample Project',
     description: 'Sample Description',
-    floorPrice: 100,
+    price: 100,
     user: mockUser,
     createdAt: new Date(),
     updatedAt: new Date(),

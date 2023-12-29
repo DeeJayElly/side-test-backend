@@ -20,7 +20,7 @@ export class NFTProject {
   description: string;
 
   @Column('decimal', { precision: 10, scale: 2 })
-  floorPrice: number;
+  price: number;
 
   @ManyToOne(() => User, (user) => user.nftProjects)
   user: User;

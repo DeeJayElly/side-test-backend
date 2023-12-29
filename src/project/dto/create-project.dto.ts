@@ -11,5 +11,5 @@ export class CreateProjectDto {
 
   @IsNotEmpty()
   @IsNumber()
-  floorPrice: number;
+  price: number;
 }
